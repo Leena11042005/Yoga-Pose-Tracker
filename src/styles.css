@@ -1,0 +1,249 @@
+/* ✅ Light & Dark Mode */
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease-in-out;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* ✅ Ensure Full Page Layout */
+.app {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ✅ Dark Mode Button */
+.toggle-btn {
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.toggle-btn:hover {
+  background-color: #444;
+}
+
+/* ✅ Progress Bar */
+.progress-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* ✅ Grid Layout (Ensure Full Width Usage with Three Columns) */
+.pose-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always three columns */
+  gap: 20px;
+  width: 100vw;
+  max-width: 1400px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.pose-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* Ensure full column width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Image Styling */
+.pose-image {
+  width: 100%;
+  height: auto; 
+  object-fit: contain;
+  border-radius: 5px;
+  max-height: 250px;
+}
+
+/* ✅ Buttons Styling */
+.timer-btn {
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.timer-btn:hover {
+  background-color: #e68900;
+}
+
+.completed {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.completed:hover {
+  background-color: #43a047;
+}
+
+/* ✅ Responsive Layout */
+@media (max-width: 1024px) {
+  .pose-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .pose-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+/* ✅ Home Page Styling */
+.home-page {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #a8edea, #fed6e3); /* Light Gradient */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ✅ Home Content Centering */
+.home-content {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ✅ Title & Text */
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Motivational Quote */
+blockquote {
+  font-style: italic;
+  color: #444;
+  margin: 20px 0;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+}
+
+/* ✅ Feature List */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features-list li {
+  font-size: 1.1rem;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features-list li::before {
+  content: "✔️";
+  margin-right: 8px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* ✅ Start Button */
+.start-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.start-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* ✅ Dark Mode Adjustments */
+.dark-mode .home-content {
+  background: rgba(18, 18, 18, 0.85);
+}
+
+.dark-mode .home-content h1,
+.dark-mode .home-content p,
+.dark-mode blockquote,
+.dark-mode .features-list li {
+  color: white;
+}
+
+/* ✅ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
