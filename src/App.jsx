@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PoseCard from "./components/PoseCard";
 import HomePage from "./components/HomePage"; // Import HomePage
-import yogaPoses from "./data/yogaPoses";
+import yogaPoses from "./data/yogaPoses.js";
 import "./styles.css";
 
 function App() {
